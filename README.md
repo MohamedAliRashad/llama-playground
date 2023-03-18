@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/MohamedAliRashad/llama-playground/blob/master/assets/website.png" width="75%">
+    <img src="https://github.com/MohamedAliRashad/llama-playground/blob/master/assets/website.png" width="90%">
 </p>
 
 # LLaMA Playground 🦙
