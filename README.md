@@ -1,6 +1,8 @@
 # LLaMA Playground 🦙
 A simple web interface to run LLaMA on a web browser.
 
+![LLaMA Playground](https://github.com/MohamedAliRashad/llama-playground/blob/master/assets/website.png)
+
 ## 👨‍🔧 How to use ?
 1. Clone the repository
     ```bash
