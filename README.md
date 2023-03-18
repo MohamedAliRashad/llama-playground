@@ -12,7 +12,7 @@ A simple web interface to run LLaMA on a web browser.
     ```
 1. Download the LLaMA weights (There is different methods to do that, the easiest i found is this)
     ```bash
-    pip install pyllama -U && python3 -m llama.download --model_size 7B --folder llama-playground/backend/app/weights
+    pip install pyllama -U && cd llama-playground && python3 -m llama.download --model_size 7B --folder backend/app/weights
     ```
 1. Add `.env` file to the root of the project with the ngrok auth token
     ```bash
