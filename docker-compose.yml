@@ -1,0 +1,54 @@
+version: '3.9'
+services:
+  llama-playground-backend:
+    container_name: llama-playground-backend
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: llama-fastapi
+    ports:
+      - 8040:8040
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8040/"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    runtime: nvidia
+    shm_size: '1gb'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      stack:
+        soft: 67108864
+        hard: 67108864
+    environment:
+      - TEMPERATURE=0.7
+      - TOP_P=0.85
+      - MAX_GEN_LEN=256
+      - MAX_SEQ_LEN=2048
+
+  llama-playground-frontend:
+    container_name: llama-playground-frontend
+    image: llama-react
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/src:/app/src
+    expose:
+      - 3000
+
+  ngrok:
+    image: shkoliar/ngrok:latest
+    ports:
+      - 4551:4551
+    links:
+      - llama-playground-frontend
+    environment:
+      - DOMAIN=llama-playground-frontend
+      - PORT=3000
+      - AUTH_TOKEN=$NGROK_AUTH
+    

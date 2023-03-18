@@ -1,0 +1,4 @@
+fastapi==0.94.0
+uvicorn[standard]==0.21.0
+fairscale==0.4.13
+sentencepiece==0.1.97
