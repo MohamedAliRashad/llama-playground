@@ -19,4 +19,4 @@ A simple web interface to run LLaMA on a web browser.
     docker-compose up --build
     ```
 
-And that's it, you can now access the playground on `http://localhost:4551` where you will find the ngrok links to try the playground and share it with your friends.
+**And that's it**, you can now access the playground on `http://localhost:4551` where you will find the ngrok links to try the playground and share it with your friends 👏
