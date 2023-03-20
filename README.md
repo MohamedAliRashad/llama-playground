@@ -3,7 +3,7 @@
 </p>
 
 # LLaMA Playground 🦙
-A simple web interface to run LLaMA on a web browser.
+A full frontend (in react) and backend (using FastAPI) to try out LLaMA 7B on a similiar interface to GPT-Playground.
 
 ## 👨‍🔧 How to use ?
 1. Clone the repository
